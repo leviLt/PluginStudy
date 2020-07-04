@@ -1,2 +1,3 @@
+include ':danmaLibrary'
 include ':pluginmodel'
 include ':app'

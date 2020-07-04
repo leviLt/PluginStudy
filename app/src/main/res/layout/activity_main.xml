@@ -6,21 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="200dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/targetView"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:text="AnimView" />-->
+    <!--    </FrameLayout>-->
+
+
+    <com.example.danmalibrary.DanmaView
+        android:id="@+id/danma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:minHeight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="50dp" />
+
+
+    <Button
+        android:id="@+id/btnAddDanma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="添加弹幕"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintRight_toLeftOf="@+id/screenChange" />
 
-        <TextView
-            android:id="@+id/targetView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="AnimView" />
-    </FrameLayout>
+    <Button
+        android:id="@+id/screenChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="横竖屏切换"
+        app:layout_constraintLeft_toRightOf="@id/btnAddDanma"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnAddDanma" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
